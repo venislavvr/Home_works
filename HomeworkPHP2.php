@@ -1,5 +1,5 @@
 <?php
-header(`Content-Type:text/html;charset=utf-8`);
+header('Content-Type:text/html;charset=utf-8');
 //Homework Task 1
 echo "<h2>Homework Task 1</h2>";
 $a=61;

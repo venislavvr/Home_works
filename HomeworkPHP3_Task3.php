@@ -15,29 +15,29 @@
  
 if (!empty($_POST["submit"])) {
 	$count=$_POST['energy'];
-	$first_price=(50*0.10)*0.20;
-$secondary_price=((100*0.15)*0.20)+$first_price;
-$third_price=((100*0.25)*0.20)+$secondary_price;
+	$first_price=(50*0.10)*1.2;
+$secondary_price=((100*0.15)*1.2)+$first_price;
+$third_price=((100*0.25)*1.2)+$secondary_price;
 
 if ($count>=51 && $count<=150) {
 	$count1=$count-50;
-	$sec_price=(($count*0.15)*0.20)+$first_price;
+	$sec_price=(($count*0.15)*1.2)+$first_price;
 	echo "цената на електроенергията е ".$sec_price;
 }
 	elseif($count>=151 && $count<=250){
 	$count2=$count-150;
-	$thirdy_price=(($count2*0.25)*0.20)+$secondary_price;
+	$thirdy_price=(($count2*0.25)*1.2)+$secondary_price;
 	echo "цената на електроенергията е ".$thirdy_price;
 }
 
 	elseif($count>=251){
 	$count3=$count-250;
-	$fourth_price=(($count3*0.35)*0.20)+$third_price;
+	$fourth_price=(($count3*0.35)*1.2)+$third_price;
 	echo "цената на електроенергията е ".$fourth_price;
 
 }
 else{
-	$fin=($count*0.10)*0.20;
+	$fin=($count*0.10)*1.2;
 	echo "цената на електроенергията е ".$fin;
 
 }
